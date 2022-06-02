@@ -1,3 +1,33 @@
-.App {
-  border: 1px solid red;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  margin-top: 20vh;
+  min-height: 55vh;
+}
+
+.buttons {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: row;
+
+  .back, .forward {
+    cursor: pointer;
+  }
+
+  .back {
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .forward {
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }

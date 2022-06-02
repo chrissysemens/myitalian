@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata&display=swap");
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+  min-height: 300px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 80vw;
+  }
+}
+
+.translation {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+.english {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  .word {
+    display: flex;
+    flex-direction: row;
+    color: #008c45;
+    margin: auto;
+  }
+}
+
+.italian {
+  display: flex;
+  flex-direction: column;
+  .word {
+    display: flex;
+    flex-direction: row;
+    color: #cd212a;
+    margin: auto;
+  }
+}
+.heading {
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.word {
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
+}
