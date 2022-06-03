@@ -16,7 +16,7 @@ const Card = ({ english, italian }: CardProps) => {
         </div>
         <div className={styles.italian}>
           <div className={styles.heading}>Italian</div>
-          <div className={styles.word}>{italian}</div>
+          {italian && <div className={styles.word}>{italian}</div>}
         </div>
       </div>
     </div>
