@@ -1,6 +1,6 @@
 # My Italian
 
-A small application built in React using the Google's Firebase firestore db to enable me to create small language flash cards tp help me learn Italian 🇮🇹
+A small application built in React using the Google's Firebase firestore db, enabling me to create small language flash cards tp help learn Italian 🇮🇹
 
 Demoable at: https://chrissysitalian.page/
 
