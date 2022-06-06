@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./App.module.scss";
-import { Card, CardProps } from "./Components/Card";
-import { Image } from "./Components/Image";
+import { Card, CardProps } from "./Components/Card/Card";
+import { Image } from "./Components/Image/Image";
 import { useFirebase } from "./Hooks/useFirebase";
 import back from "./assets/back.svg";
 import forward from "./assets/forward.svg";
 import shuffle from "lodash/shuffle";
-import { Toggle } from "./Components/Toggle";
+import { Toggle } from "./Components/Toggle/Toggle";
 
 function App() {
   const { data } = useFirebase<CardProps>({ collectionName: "Translations" });
