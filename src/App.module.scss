@@ -33,9 +33,28 @@
   }
 }
 
-@media only screen and (orientation: landscape) {
+.revealToggle {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 12px;
+
+  .toggleText {
+    margin: auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-device-width: 900px) {
   .card {
-    margin-top: 2vh;
+    margin-top: 4vh !important;
   }
 
   .buttons {

@@ -6,11 +6,13 @@ import { useFirebase } from "./Hooks/useFirebase";
 import back from "./assets/back.svg";
 import forward from "./assets/forward.svg";
 import shuffle from "lodash/shuffle";
+import { Toggle } from "./Components/Toggle";
 
 function App() {
   const { data } = useFirebase<CardProps>({ collectionName: "Translations" });
   const [number, setNumber] = useState<number>(0);
   const [cards, setCards] = useState<Array<CardProps>>([]);
+  const [clickToReveal, setClickToReveal] = useState<boolean>(true);
 
   useEffect(() => {
     const shuffled = shuffle(data);
@@ -29,12 +31,26 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <div className={styles.revealToggle}>
+        <div className={styles.toggleText}>Enable Click to Reveal</div>
+        <div className={styles.toggle}>
+          <Toggle
+            checked={clickToReveal}
+            onChange={() => setClickToReveal(!clickToReveal)}
+            readonly={false}
+            size="s"
+            disabled={false}
+          />
+        </div>
+      </div>
       {cards[number] && (
         <>
           <div className={styles.card}>
             <Card
+              key={cards[number].english}
               italian={cards[number].italian}
               english={cards[number].english}
+              clickToReveal={clickToReveal}
             />
           </div>
           <div className={styles.buttons}>
