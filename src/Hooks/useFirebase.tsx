@@ -42,6 +42,7 @@ export const useFirebase = <T,>({
       });
       setData(items);
     });
+    // eslint-disable-next-line
   }, []);
   return { data, add, remove };
 };

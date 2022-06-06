@@ -16,7 +16,8 @@
   align-self: center;
   flex-direction: row;
 
-  .back, .forward {
+  .back,
+  .forward {
     cursor: pointer;
   }
 
@@ -29,5 +30,16 @@
     display: flex;
     margin-left: 10vw;
     margin-right: 10vw;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .card {
+    margin-top: 2vh;
+  }
+
+  .buttons {
+    height: 16vh;
+    margin-bottom: 2vh;
   }
 }

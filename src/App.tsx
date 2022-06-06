@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     const shuffled = shuffle(data);
-    console.log('shuffled', shuffled);
     setCards(shuffled);
   }, [data]);
 
