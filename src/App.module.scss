@@ -8,6 +8,7 @@
 .card {
   margin-top: 20vh;
   min-height: 55vh;
+  transition: all 0.3s ease-in-out;
 }
 
 .buttons {
@@ -15,10 +16,24 @@
   justify-self: center;
   align-self: center;
   flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
 
   .back,
   .forward {
     cursor: pointer;
+  }
+
+  .back,
+  .forward {
+    img {
+      padding-bottom: 20px;
+      display: flex;
+      display: flex;
+      align-self: center;
+      margin-top: 25px;
+    }
   }
 
   .back {
@@ -46,6 +61,7 @@
   border-radius: 20px;
   margin: 5px;
   font-size: 12px;
+  cursor: pointer;
 
   .toggleText {
     margin: auto;

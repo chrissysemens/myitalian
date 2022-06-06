@@ -12,7 +12,7 @@ function App() {
   const { data } = useFirebase<CardProps>({ collectionName: "Translations" });
   const [number, setNumber] = useState<number>(0);
   const [cards, setCards] = useState<Array<CardProps>>([]);
-  const [clickToReveal, setClickToReveal] = useState<boolean>(true);
+  const [clickToReveal, setClickToReveal] = useState<boolean>(false);
 
   useEffect(() => {
     const shuffled = shuffle(data);
@@ -31,7 +31,10 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <div className={styles.revealToggle}>
+      <div
+        className={styles.revealToggle}
+        onChange={() => setClickToReveal(!clickToReveal)}
+      >
         <div className={styles.toggleText}>Enable Click to Reveal</div>
         <div className={styles.toggle}>
           <Toggle
