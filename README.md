@@ -4,6 +4,6 @@ A small application built in React using the Google's Firebase firestore db to e
 
 Demoable at: https://chrissysitalian.page/
 
-![image](https://user-images.githubusercontent.com/46443589/171757926-6ee2a1b2-3b9d-4f84-b316-68f6afcb53a5.png)
+![image](https://user-images.githubusercontent.com/46443589/172234566-8c36a565-05d6-456f-ab7b-423d6a82c3c9.png)
 
 
