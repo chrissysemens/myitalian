@@ -1,0 +1,103 @@
+$negative: #cd212a;
+$positive: #008c45;
+$toggle-button: #fff;
+$toggle-disabled: rgba(255, 255, 255, 0.5);
+$toggle-button-disabled: rgba(255, 255, 255, 0.3);
+
+.switch {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+  margin: 5px 10px 10px 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $negative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 55px;
+}
+
+.slider.disabled {
+  cursor: not-allowed;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 2px;
+  background-color: $toggle-button;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $positive;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $positive;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+input:disabled + .slider {
+  background: $toggle-disabled;
+}
+
+input:disabled + .slider:before {
+  background: $toggle-button-disabled;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 14px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.s {
+  width: 28px;
+  height: 14px;
+  margin: 5px;
+
+  .slider {
+    width: 28px;
+  }
+
+  .slider:before {
+    height: 14px;
+    width: 14px;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+}
